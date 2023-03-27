@@ -12,3 +12,7 @@ img {
 * {
     box-sizing: border-box;
 }
+
+del {
+    color: red;
+}
