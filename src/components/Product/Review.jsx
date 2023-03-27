@@ -6,7 +6,9 @@ import { Card, Typography, CardContent, Rating } from "@mui/material";
 const Review = ({ data }) => {
  return (
   <>
-   {data ? (
+   {data === [] ? (
+    <>There is no review data for this product</>
+   ) : (
     <Card key={data.id}>
      <CardContent>
       <Rating name="read-only" value={data.rating} readOnly />
@@ -18,8 +20,6 @@ const Review = ({ data }) => {
       </Typography>
      </CardContent>
     </Card>
-   ) : (
-    <>There is no review data for this product</>
    )}
   </>
  );

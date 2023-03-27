@@ -27,10 +27,6 @@ const Line = styled.hr`
 const ProductDetails = ({ data, isError, productAmount, cart }) => {
  const { title, tags, description, price, discountedPrice, imageUrl, reviews } = data;
 
- console.log(data)
-
- console.log(reviews);
-
  return (
   <>
    {isError ? (
@@ -43,7 +39,7 @@ const ProductDetails = ({ data, isError, productAmount, cart }) => {
         <Grid item xs={12} order={{ xs: 1, md: 1, lg: 1 }}>
          <h1>{title}</h1>
          <Line />
-         <p>Category: {tags}</p>
+         <p>Category: {tags && tags.join(", ")}</p>
         </Grid>
         <Grid item xs={6} order={{ xs: 3, md: 3, lg: 2 }}>
          <Grid container direction="column" spacing={2}>
@@ -77,11 +73,14 @@ const ProductDetails = ({ data, isError, productAmount, cart }) => {
          </Grid>
          <Grid item xs={12}>
           <Grid container direction="column" spacing={2} rowSpacing={2}>
-           {/* {reviews.map((review) => {
-            <Grid item xs={12} key={review.id}>
-             <Review data={review} />
-            </Grid>;
-           })} */}
+           {reviews &&
+            reviews.map((review) => {
+             return (
+              <Grid item xs={12} key={review.id}>
+               <Review data={review} />
+              </Grid>
+             );
+            })}
           </Grid>
          </Grid>
         </Grid>
