@@ -1,6 +1,5 @@
 // Importing react
 import React, { useContext } from "react";
-import styled from "styled-components";
 
 // Importing mui items
 import { Card, CardMedia, Box, CardContent, IconButton } from "@mui/material";
