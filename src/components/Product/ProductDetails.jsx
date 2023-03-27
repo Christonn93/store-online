@@ -25,27 +25,11 @@ const Line = styled.hr`
 `;
 
 const ProductDetails = ({ data, isError, productAmount, cart }) => {
- const { title, description, price, discountedPrice, imageUrl, tags = [], reviews } = data;
- // const { title, tags, description, price, discountedPrice, imageUrl, reviews } = data;
+ const { title, tags, description, price, discountedPrice, imageUrl, reviews } = data;
 
- const review = (data) => {  
-  console.log(reviews);
-  if (!data) {
-   return (
-    <Grid item xs={12} key={"nullKey"}>
-     <p>There is no reviews on this item </p>
-    </Grid>
-   );
-  } else {
-   reviews.map((e) => {
-    return (
-     <Grid item xs={12} key={e.id}>
-      <Review data={e} />
-     </Grid>
-    );
-   });
-  }
- };
+ console.log(data)
+
+ console.log(reviews);
 
  return (
   <>
@@ -93,7 +77,11 @@ const ProductDetails = ({ data, isError, productAmount, cart }) => {
          </Grid>
          <Grid item xs={12}>
           <Grid container direction="column" spacing={2} rowSpacing={2}>
-           {review(reviews)}
+           {/* {reviews.map((review) => {
+            <Grid item xs={12} key={review.id}>
+             <Review data={review} />
+            </Grid>;
+           })} */}
           </Grid>
          </Grid>
         </Grid>
