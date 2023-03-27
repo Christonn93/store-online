@@ -1,7 +1,7 @@
 // Importing react
 import React, { useContext } from "react";
 
-import { Stack, Divider, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 
 // Importing fetch function
 import ApiHook from "../../api/ApiHooks";

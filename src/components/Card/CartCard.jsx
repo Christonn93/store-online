@@ -17,12 +17,6 @@ import ApiHook from "../../api/ApiHooks";
 import { CartContext } from "../../context/cartContext";
 
 // Adding style
-const ItemImage = styled.div`
- img {
-  width: 100%;
-  object-fit: cover;
- }
-`;
 const pageHeader = {
  margin: "0",
  padding: "0",
