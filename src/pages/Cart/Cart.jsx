@@ -37,7 +37,7 @@ const Cart = () => {
   <>
   <BasicBreadcrumbs title="Cart" page="Cart" description="Store online Cart summary"/>
    <Box sx={{ flexGrow: 1, marginBottom: 3 }}>
-    <Grid container spacing={5}>
+   <Grid container spacing={2} columns={{ xs: 2, md: 12 }} rowSpacing={3} justifyContent={{ xs: "center", md: "start" }}>
      <Grid item xs={12}>
       <h1>Your cart</h1>
      </Grid>
