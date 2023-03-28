@@ -212,7 +212,7 @@ export const themeSettings = (mode) => {
    },
    h3: {
     fontFamily: ["Source Sans Pro", "sans-serif"].join(","),
-    fontSize: 24,
+    fontSize: 20,
    },
    h4: {
     fontFamily: ["Source Sans Pro", "sans-serif"].join(","),

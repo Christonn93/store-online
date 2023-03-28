@@ -15,16 +15,6 @@ import ApiHook from "../../api/ApiHooks";
 // Importing cart context
 import { CartContext } from "../../context/cartContext";
 
-// Adding style
-const pageHeader = {
- margin: "0",
- padding: "0",
-};
-
-const red = {
- color: "red",
-};
-
 const CartCard = ({ id }) => {
  const { data } = ApiHook(`https://api.noroff.dev/api/v1/online-shop/${id}`);
  const cart = useContext(CartContext);
@@ -37,10 +27,10 @@ const CartCard = ({ id }) => {
     height: "150",
    }}
   >
-   <CardMedia component="img" image={data.imageUrl} alt={data.title} sx={{ width: 200 }} />
+   <CardMedia component="img" image={data.imageUrl} alt={data.title} sx={{ width: 200 }} style={null}/>
    <Box sx={{ display: "flex", flexDirection: "column", flex: "1 1 auto", padding: "10px" }}>
     <CardContent sx={{ display: "flex", justifyContent: "space-between" }}>
-     <h3 style={pageHeader}>{data.title}</h3>
+     <h3>{data.title}</h3>
      <IconButton variant="contained" color="error" onClick={() => cart.deleteFromCart(data.id)}>
       <DeleteForeverIcon fontSize="small" />
      </IconButton>
@@ -53,7 +43,7 @@ const CartCard = ({ id }) => {
      ) : (
       <>
        <span>
-        {data.discountedPrice} NOK <del style={red}>{data.price} NOK</del>
+        {data.discountedPrice} NOK <del>{data.price} NOK</del>
        </span>
       </>
      )}
