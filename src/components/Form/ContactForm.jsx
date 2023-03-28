@@ -58,7 +58,7 @@ const ContactForm = () => {
         gap="30px"
         gridTemplateColumns={"repeat(4, minmax(0, 1fr))"}
         sx={{
-         "& > div": { gridColumn: isMobile ? undefined : "span 4" },
+         "& > div": { gridColumn: isMobile ? undefined : "span 2" },
         }}
        >
         <TextField
@@ -71,7 +71,7 @@ const ContactForm = () => {
          name="name"
          error={!!touched.name && !!errors.name}
          helperText={touched.name && errors.name}
-         sx={{ gridColumn: "span 2" }}
+         sx={{ gridColumn: "span 4" }}
          InputProps={{
           startAdornment: (
            <InputAdornment position="start">
@@ -90,7 +90,7 @@ const ContactForm = () => {
          name="phone"
          error={!!touched.phone && !!errors.phone}
          helperText={touched.phone && errors.phone}
-         sx={{ gridColumn: "span 2" }}
+         sx={{ gridColumn: "span 4" }}
          InputProps={{
           startAdornment: (
            <InputAdornment position="start">
@@ -109,7 +109,7 @@ const ContactForm = () => {
          name="email"
          error={!!touched.email && !!errors.email}
          helperText={touched.email && errors.email}
-         sx={{ gridColumn: "span 2" }}
+         sx={{ gridColumn: "span 4" }}
          InputProps={{
           startAdornment: (
            <InputAdornment position="start">
@@ -128,7 +128,7 @@ const ContactForm = () => {
          name="subject"
          error={!!touched.subject && !!errors.subject}
          helperText={touched.subject && errors.subject}
-         sx={{ gridColumn: "span 2" }}
+         sx={{ gridColumn: "span 4" }}
          InputProps={{
           startAdornment: (
            <InputAdornment position="start">
@@ -149,7 +149,7 @@ const ContactForm = () => {
          name="message"
          error={!!touched.message && !!errors.message}
          helperText={touched.message && errors.message}
-         sx={{ gridColumn: "span 2" }}
+         sx={{ gridColumn: "span 4" }}
          InputProps={{
           startAdornment: (
            <InputAdornment position="start">
