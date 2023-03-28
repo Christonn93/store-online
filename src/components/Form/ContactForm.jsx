@@ -2,7 +2,7 @@
 import React from "react";
 
 // Importing MUI
-import { Button, TextField, Box, Container, useMediaQuery, useTheme, Paper } from "@mui/material";
+import { Button, TextField, Box, Container, useMediaQuery, useTheme } from "@mui/material";
 import InputAdornment from "@mui/material/InputAdornment";
 import Checkbox from "@mui/material/Checkbox";
 
