@@ -4,6 +4,7 @@ import React from "react";
 // Importing MUI
 import { Button, TextField, Box, Container, useMediaQuery, useTheme, Paper } from "@mui/material";
 import InputAdornment from "@mui/material/InputAdornment";
+import Checkbox from "@mui/material/Checkbox";
 
 // Importing icons
 import AccountCircle from "@mui/icons-material/AccountCircle";
@@ -49,7 +50,7 @@ const ContactForm = () => {
 
  return (
   <Container align="center">
-   <Paper sx={{padding: 2}}>
+   <Box sx={{ padding: 2 }}>
     <Formik onSubmit={formSubmit} initialValues={initialValues} validationSchema={checkoutSchema}>
      {({ values, errors, touched, handleBlur, handleSubmit, handleChange }) => (
       <form onSubmit={handleSubmit}>
@@ -158,6 +159,10 @@ const ContactForm = () => {
           ),
          }}
         />
+        <Box display={"flex"} alignItems="center">
+         <Checkbox />
+         <p>By sending this form I agree til the terms of use</p>
+        </Box>
        </Box>
        <Box display="flex" justifyContent="end" mt="20px">
         <Button type="submit" color="secondary" variant="contained">
@@ -167,7 +172,7 @@ const ContactForm = () => {
       </form>
      )}
     </Formik>
-   </Paper>
+   </Box>
   </Container>
  );
 };
