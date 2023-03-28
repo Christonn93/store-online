@@ -2,7 +2,7 @@
 import React from "react";
 
 // Importing mui items
-import { FormControl, TextField, Autocomplete } from "@mui/material";
+import { TextField, Autocomplete } from "@mui/material";
 
 // Importing components
 import SearchListItem from "./SearchListItem";
@@ -21,62 +21,60 @@ const SearchBar = ({ searchInput, setSearchInput, data }) => {
  });
 
  return (
-  <form onSubmit={(e) => e.preventDefault()}>
-   <FormControl>
-    <Autocomplete
-     selectOnFocus
-     clearOnBlur
-     handleHomeEndKeys
-     disableClearable
-     freeSolo
-     sx={{ width: 240 }}
-     id="SearchBar"
-     options={option}
-     noOptionsText={"No match found"}
-     value={searchInput}
-     onChange={(event, newValue) => {
-      if (newValue === null) {
-       return;
-      }
-      if (typeof newValue === "string") {
-       setSearchInput(newValue.label);
-      } else if (newValue && newValue.inputValue) {
-       // Create a new value from the user input
-       setSearchInput(newValue.label);
-      } else {
-       setSearchInput(newValue.label);
-      }
-     }}
-     getOptionLabel={(option) => {
-      // Value selected with enter, right from the input
-      if (typeof option === "string") {
-       return option;
-      }
-      // Add "xxx" option created dynamically
-      if (option.label) {
+   <form onSubmit={(e) => e.preventDefault()}>
+     <Autocomplete
+      selectOnFocus
+      clearOnBlur
+      handleHomeEndKeys
+      disableClearable
+      freeSolo
+      sx={{ width: 240 }}
+      id="SearchBar"
+      options={option}
+      noOptionsText={"No match found"}
+      value={searchInput}
+      onChange={(event, newValue) => {
+       if (newValue === null) {
+        return;
+       }
+       if (typeof newValue === "string") {
+        setSearchInput(newValue.label);
+       } else if (newValue && newValue.inputValue) {
+        // Create a new value from the user input
+        setSearchInput(newValue.label);
+       } else {
+        setSearchInput(newValue.label);
+       }
+      }}
+      getOptionLabel={(option) => {
+       // Value selected with enter, right from the input
+       if (typeof option === "string") {
+        return option;
+       }
+       // Add "xxx" option created dynamically
+       if (option.label) {
+        return option.label;
+       }
+       // Regular option
        return option.label;
-      }
-      // Regular option
-      return option.label;
-     }}
-     renderOption={(props, option) => (
-      <React.Fragment key={option.id}>
-       <SearchListItem props={props} option={option} />
-      </React.Fragment>
-     )}
-     renderInput={(params) => (
-      <TextField
-       {...params}
-       id="outlined-controlled"
-       label="Search products"
-       onChange={(e) => {
-        setSearchInput(e.target.value);
-       }}
-      />
-     )}
-    />
-   </FormControl>
-  </form>
+      }}
+      renderOption={(props, option) => (
+       <React.Fragment key={option.id}>
+        <SearchListItem props={props} option={option} />
+       </React.Fragment>
+      )}
+      renderInput={(params) => (
+       <TextField
+        {...params}
+        id="outlined-controlled"
+        label="Search products"
+        onChange={(e) => {
+         setSearchInput(e.target.value);
+        }}
+       />
+      )}
+     />
+   </form>
  );
 };
 
