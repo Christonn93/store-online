@@ -2,59 +2,172 @@
 import React from "react";
 
 // Importing MUI
-import { Button, TextField, Box, Container } from "@mui/material";
+import { Button, TextField, Box, Container, useMediaQuery, useTheme, Paper } from "@mui/material";
+import InputAdornment from "@mui/material/InputAdornment";
 
-// Function to check input data
-const nameIsValid = () => {};
+// Importing icons
+import AccountCircle from "@mui/icons-material/AccountCircle";
+import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
+import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
+import TitleIcon from "@mui/icons-material/Title";
+import SubjectIcon from "@mui/icons-material/Subject";
 
-// Function to check input data
-const emailIsValid = () => {};
+// Importing Dialog
 
-// Function to check input data
-const subjectIsValid = () => {};
-
-// Function to check input data
-const messageIsValid = () => {};
+// Importing formik
+import { Formik } from "formik";
+import * as yup from "yup";
 
 const ContactForm = () => {
+ const device = useTheme();
+ const isMobile = useMediaQuery(device.breakpoints.down("md"));
+
+ const formSubmit = (values) => {
+  console.log(values);
+ };
+
+ const initialValues = {
+  name: "",
+  phone: "",
+  email: "",
+  subject: "",
+  message: "",
+ };
+
+ // eslint-disable-next-line
+ const emailRegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+ const phoneRegExp = /^((\+[1-9]{1,4}[ -]?)|(\([0-9]{2,3}\)[ -]?)|([0-9]{2,4})[ -]?)*?[0-9]{3,4}[ -]?[0-9]{3,4}$/;
+
+ const checkoutSchema = yup.object().shape({
+  name: yup.string().min(3, "must be at least 3 characters long").required("Your name is missing"),
+  phone: yup.string().min(3, "must be at least 3 characters long").matches(phoneRegExp, "Phone number is not valid").required("Please add your number"),
+  email: yup.string().min(3, "must be at least 3 characters long").matches(emailRegExp, "The email must be a valid email").email("invalid email").required("required"),
+  subject: yup.string().min(3, "must be at least 3 characters long").required("Please add a subject title"),
+  message: yup.string().min(3, "must be at least 3 characters long").required("Please add a message"),
+ });
+
  return (
   <Container align="center">
-   <h1>Contact us</h1>
-   <Box
-    component="form"
-    maxWidth={"auto"}
-    sx={{
-     "& .MuiTextField-root": { m: 1 },
-    }}
-    noValidate
-    autoComplete="off"
-   >
-    {nameIsValid ? (
-     <TextField fullWidth required id="outlined-required" label="Full Name" helperText="Please enter your name" name="text" />
-    ) : (
-     <TextField fullWidth required id="outlined-error" label="Full Name" error helperText="Minimum number of characters is 3, required" />
-    )}
-
-    {emailIsValid ? (
-     <TextField fullWidth required id="outlined-required" label="Email" helperText="Please enter your Email" name="email" />
-    ) : (
-     <TextField fullWidth required id="outlined-required" label="Email" error helperText="Must be a valid email address, required" />
-    )}
-
-    {subjectIsValid ? (
-     <TextField fullWidth required id="outlined-required" label="Subject" helperText="Please enter a subject" name="text" />
-    ) : (
-     <TextField fullWidth required id="outlined-error" label="Subject" error helperText="Minimum number of characters is 3, required" />
-    )}
-
-    {messageIsValid ? (
-     <TextField fullWidth id="outlined-multiline-static" label="Message" multiline rows={4} helperText="Please enter your message" />
-    ) : (
-     <TextField fullWidth id="outlined-error" label="Message" multiline rows={4} error helperText="Incorrect entry." />
-    )}
-
-    <Button variant="contained">Send</Button>
-   </Box>
+   <Paper sx={{padding: 2}}>
+    <Formik onSubmit={formSubmit} initialValues={initialValues} validationSchema={checkoutSchema}>
+     {({ values, errors, touched, handleBlur, handleSubmit, handleChange }) => (
+      <form onSubmit={handleSubmit}>
+       <Box
+        display="grid"
+        gap="30px"
+        gridTemplateColumns={"repeat(4, minmax(0, 1fr))"}
+        sx={{
+         "& > div": { gridColumn: isMobile ? undefined : "span 4" },
+        }}
+       >
+        <TextField
+         variant="filled"
+         type="text"
+         label="Name"
+         onBlur={handleBlur}
+         onChange={handleChange}
+         value={values.name}
+         name="name"
+         error={!!touched.name && !!errors.name}
+         helperText={touched.name && errors.name}
+         sx={{ gridColumn: "span 2" }}
+         InputProps={{
+          startAdornment: (
+           <InputAdornment position="start">
+            <AccountCircle />
+           </InputAdornment>
+          ),
+         }}
+        />
+        <TextField
+         variant="filled"
+         type="tel"
+         label="phone"
+         onBlur={handleBlur}
+         onChange={handleChange}
+         value={values.phone}
+         name="phone"
+         error={!!touched.phone && !!errors.phone}
+         helperText={touched.phone && errors.phone}
+         sx={{ gridColumn: "span 2" }}
+         InputProps={{
+          startAdornment: (
+           <InputAdornment position="start">
+            <LocalPhoneIcon />
+           </InputAdornment>
+          ),
+         }}
+        />
+        <TextField
+         variant="filled"
+         type="email"
+         label="Email"
+         onBlur={handleBlur}
+         onChange={handleChange}
+         value={values.email}
+         name="email"
+         error={!!touched.email && !!errors.email}
+         helperText={touched.email && errors.email}
+         sx={{ gridColumn: "span 2" }}
+         InputProps={{
+          startAdornment: (
+           <InputAdornment position="start">
+            <AlternateEmailIcon />
+           </InputAdornment>
+          ),
+         }}
+        />
+        <TextField
+         variant="filled"
+         type="text"
+         label="Subject"
+         onBlur={handleBlur}
+         onChange={handleChange}
+         value={values.subject}
+         name="subject"
+         error={!!touched.subject && !!errors.subject}
+         helperText={touched.subject && errors.subject}
+         sx={{ gridColumn: "span 2" }}
+         InputProps={{
+          startAdornment: (
+           <InputAdornment position="start">
+            <TitleIcon />
+           </InputAdornment>
+          ),
+         }}
+        />
+        <TextField
+         variant="filled"
+         type="text"
+         label="Message"
+         multiline
+         rows={4}
+         onBlur={handleBlur}
+         onChange={handleChange}
+         value={values.message}
+         name="message"
+         error={!!touched.message && !!errors.message}
+         helperText={touched.message && errors.message}
+         sx={{ gridColumn: "span 2" }}
+         InputProps={{
+          startAdornment: (
+           <InputAdornment position="start">
+            <SubjectIcon />
+           </InputAdornment>
+          ),
+         }}
+        />
+       </Box>
+       <Box display="flex" justifyContent="end" mt="20px">
+        <Button type="submit" color="secondary" variant="contained">
+         Send
+        </Button>
+       </Box>
+      </form>
+     )}
+    </Formik>
+   </Paper>
   </Container>
  );
 };
