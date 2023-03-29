@@ -1,10 +1,8 @@
 // Importing react
-import React from "react";
+import React, { useState } from "react";
 
 // Importing MUI
-import { Button, TextField, Box, Container, useMediaQuery, useTheme } from "@mui/material";
-import InputAdornment from "@mui/material/InputAdornment";
-import Checkbox from "@mui/material/Checkbox";
+import { Button, TextField, Box, Container, InputAdornment, Checkbox } from "@mui/material";
 
 // Importing icons
 import AccountCircle from "@mui/icons-material/AccountCircle";
@@ -20,8 +18,7 @@ import { Formik } from "formik";
 import * as yup from "yup";
 
 const ContactForm = () => {
- const device = useTheme();
- const isMobile = useMediaQuery(device.breakpoints.down("md"));
+    const [isChecked, setIsChecked] = useState(false);
 
  const formSubmit = (values) => {
   console.log(values);
@@ -54,25 +51,19 @@ const ContactForm = () => {
     <Formik onSubmit={formSubmit} initialValues={initialValues} validationSchema={checkoutSchema}>
      {({ values, errors, touched, handleBlur, handleSubmit, handleChange }) => (
       <form onSubmit={handleSubmit}>
-       <Box
-        display="grid"
-        gap="30px"
-        gridTemplateColumns={"repeat(4, minmax(0, 1fr))"}
-        sx={{
-         "& > div": { gridColumn: isMobile ? undefined : "span 2" },
-        }}
-       >
+       <Box>
         <TextField
-         variant="filled"
-         type="text"
          label="Name"
+         variant="outlined"
+         fullWidth
+         margin="normal"
+         type="text"
          onBlur={handleBlur}
          onChange={handleChange}
          value={values.name}
          name="name"
          error={!!touched.name && !!errors.name}
          helperText={touched.name && errors.name}
-         sx={{ gridColumn: "span 4" }}
          InputProps={{
           startAdornment: (
            <InputAdornment position="start">
@@ -82,16 +73,17 @@ const ContactForm = () => {
          }}
         />
         <TextField
-         variant="filled"
+         variant="outlined"
+         fullWidth
+         margin="normal"
          type="tel"
-         label="phone"
+         label="Phone"
          onBlur={handleBlur}
          onChange={handleChange}
          value={values.phone}
          name="phone"
          error={!!touched.phone && !!errors.phone}
          helperText={touched.phone && errors.phone}
-         sx={{ gridColumn: "span 4" }}
          InputProps={{
           startAdornment: (
            <InputAdornment position="start">
@@ -101,7 +93,9 @@ const ContactForm = () => {
          }}
         />
         <TextField
-         variant="filled"
+         variant="outlined"
+         fullWidth
+         margin="normal"
          type="email"
          label="Email"
          onBlur={handleBlur}
@@ -110,7 +104,6 @@ const ContactForm = () => {
          name="email"
          error={!!touched.email && !!errors.email}
          helperText={touched.email && errors.email}
-         sx={{ gridColumn: "span 4" }}
          InputProps={{
           startAdornment: (
            <InputAdornment position="start">
@@ -120,7 +113,9 @@ const ContactForm = () => {
          }}
         />
         <TextField
-         variant="filled"
+         variant="outlined"
+         fullWidth
+         margin="normal"
          type="text"
          label="Subject"
          onBlur={handleBlur}
@@ -129,7 +124,6 @@ const ContactForm = () => {
          name="subject"
          error={!!touched.subject && !!errors.subject}
          helperText={touched.subject && errors.subject}
-         sx={{ gridColumn: "span 4" }}
          InputProps={{
           startAdornment: (
            <InputAdornment position="start">
@@ -139,7 +133,9 @@ const ContactForm = () => {
          }}
         />
         <TextField
-         variant="filled"
+         variant="outlined"
+         fullWidth
+         margin="normal"
          type="text"
          label="Message"
          multiline
@@ -150,7 +146,6 @@ const ContactForm = () => {
          name="message"
          error={!!touched.message && !!errors.message}
          helperText={touched.message && errors.message}
-         sx={{ gridColumn: "span 4" }}
          InputProps={{
           startAdornment: (
            <InputAdornment position="start">
@@ -159,13 +154,11 @@ const ContactForm = () => {
           ),
          }}
         />
-        <Box display={"flex"} alignItems="center">
-         <Checkbox />
+        <Box display="flex" justifyContent="end" mt="20px">
+         <Checkbox checked={isChecked} onChange={(e) => setIsChecked(e.target.checked)}/>
          <p>By sending this form I agree til the terms of use</p>
         </Box>
-       </Box>
-       <Box display="flex" justifyContent="end" mt="20px">
-        <Button type="submit" color="secondary" variant="contained">
+        <Button type="submit" color="secondary" variant="contained"  disabled={!isChecked}>
          Send
         </Button>
        </Box>
