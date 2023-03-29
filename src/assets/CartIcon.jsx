@@ -1,13 +1,22 @@
+// Importing React
 import * as React from "react";
-import Badge from "@mui/material/Badge";
-import IconButton from "@mui/material/IconButton";
+
+// Importing MUI
+import { Badge, IconButton } from "@mui/material";
+
+// Importing MUI Icons
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
-const CartIcon = (props) => {
+/**
+ *
+ * @param {amount}
+ * @returns Cart icon for the navigation
+ */
+const CartIcon = ({ amount }) => {
  return (
   <IconButton aria-label="cart">
-   <Badge badgeContent={props.amount} color="secondary">
-    <ShoppingCartIcon color="secondary" value={props.amount}/>
+   <Badge badgeContent={amount} color="secondary">
+    <ShoppingCartIcon color="secondary" value={amount} />
    </Badge>
   </IconButton>
  );

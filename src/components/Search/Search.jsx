@@ -1,7 +1,7 @@
 // Importing react
 import React from "react";
 
-// Importing mui items
+// Importing MUI
 import { TextField, Autocomplete } from "@mui/material";
 
 // Importing components

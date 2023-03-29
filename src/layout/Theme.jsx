@@ -1,4 +1,4 @@
-// Importing react elements
+// Importing React
 import { createContext, useState, useMemo } from "react";
 
 // Importing MUI
@@ -7,7 +7,8 @@ import { createTheme } from "@mui/material/styles";
 /**
  * Looked at a tutorial to create this theme.
  *
- *
+ * @YoutubeVideo https://www.youtube.com/watch?v=wYpCWwD1oz0&t=2223s 
+ * @creator the base layout is created EdRoh. Adjustments have been done to fit my need
  */
 
 // Color tokens

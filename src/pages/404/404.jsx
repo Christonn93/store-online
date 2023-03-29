@@ -1,26 +1,34 @@
-// Importing react
-import { Paper, Container } from "@mui/material";
+// Importing React
 import React from "react";
 import { Link } from "react-router-dom";
 
-const WarningText = {
-    color: "red"
-}
+// Importing MUI
+import { Paper, Container, Typography } from "@mui/material";
 
+// TODO - jsDocs
+/**
+ *
+ * @returns
+ */
 function RouteNotFound() {
  return (
- <Container>
-    <Paper elevation={3}
+  <Container>
+   <Paper
+    elevation={3}
     sx={{
-        padding: "20px",
-        border: "1px solid red",
-        borderRadius: "15px"
+     padding: "20px",
+     border: "1px solid red",
+     borderRadius: "15px",
     }}
-    >
-        <h1 style={WarningText}>404</h1>
-        <p>We are sorry. There is a error that have occurred with the link you clicked. Please return to <Link to={"/"}>Home</Link></p>
-    </Paper>   
- </Container>
+   >
+    <Typography variant="h1" color="red">
+     404
+    </Typography>
+    <Typography variant="body1">
+     We are sorry. There is a error that have occurred with the link you clicked. Please return to <Link to={"/"}>Home</Link>
+    </Typography>
+   </Paper>
+  </Container>
  );
 }
 export default RouteNotFound;

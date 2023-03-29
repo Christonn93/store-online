@@ -1,4 +1,4 @@
-// Importing react
+// Importing React
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 
@@ -17,7 +17,7 @@ import Checkout from "./pages/Checkout/Checkout";
 import Privacy from "./pages/Privacy/Privacy";
 import NotFound from "./pages/404/404";
 
-// Importing cart provider
+// Importing context provider
 import CartProvider from "./context/cartContext";
 
 // Importing Theme

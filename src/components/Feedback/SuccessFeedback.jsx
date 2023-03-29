@@ -1,20 +1,26 @@
+// Importing React
 import React from "react";
 
-import { Alert, AlertTitle, Container, Box } from "@mui/material";
+// Importing MUI
+import { Alert, AlertTitle, Container, Box, Typography } from "@mui/material";
 
-const SuccessFeedback = (props) => {
- const title = props.title;
- const body = props.body;
- const link = props.link;
- const option = props.option;
- const elevation = props.elevation;
+// Importing component
+import ButtonComponent from "../Button/ButtonComponent";
 
+/**
+ *
+ * @param { title, body, option, elevation, variant }
+ * @returns Success feedback to user.
+ */
+const SuccessFeedback = ({ title, body, option, elevation, variant }) => {
  return (
-  <Alert severity="success" elevation={elevation}>
+  <Alert severity="success" elevation={elevation} variant={variant}>
    <AlertTitle>{title}</AlertTitle>
    <Container>
-    {body}
-    <Box sx={{ mt: 5 }}>{link}</Box>
+    <Typography variant="body1">{body}</Typography>
+    <Box sx={{ mt: 5 }}>
+     <ButtonComponent variant="outlined" buttonText="Back to home" link="/" color="success" />
+    </Box>
     {option}
    </Container>
   </Alert>

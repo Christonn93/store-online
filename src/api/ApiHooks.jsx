@@ -1,4 +1,4 @@
-// Importing react elements
+// Importing React
 import { useEffect, useState } from "react";
 
 /**

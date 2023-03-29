@@ -1,20 +1,27 @@
 // Importing react
 import React, { useContext } from "react";
 
-// Importing mui items
+// Importing MUI
 import { Card, CardMedia, Box, CardContent, IconButton } from "@mui/material";
 
-// Importing mui icons
+// Importing MUI Icons
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 
-// Importing fetch function
+// Importing function
 import ApiHook from "../../api/ApiHooks";
 
-// Importing cart context
+// Importing context
 import { CartContext } from "../../context/cartContext";
 
+
+// TODO - jsdoc's need to be filled out
+/**
+ * 
+ * @param {*} param0 
+ * @returns 
+ */
 const CartCard = ({ id }) => {
  const { data } = ApiHook(`https://api.noroff.dev/api/v1/online-shop/${id}`);
  const cart = useContext(CartContext);

@@ -1,0 +1,14 @@
+.Inline {
+ display: flex;
+ justify-content: center;
+};
+
+.StyledLinkWhite {
+ color: white;
+ text-align: start;
+};
+
+.StyledLinkBlack {
+ color: black;
+ text-align: start;
+};

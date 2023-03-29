@@ -1,21 +1,26 @@
-// Importing react
+// Importing React
 import React, { useContext } from "react";
 import { useParams } from "react-router-dom";
 
 // Importing MUI
 import { Box, Container } from "@mui/material";
 
-// Importing utils// Importing utils
+// Importing utils
 import BasicBreadcrumbs from "../../utils/BreadCrumbs";
 import LoadingAnimation from "../../utils/LoadingAnimation";
 
-// Importing hook
+// Importing functions
 import ApiHook from "../../api/ApiHooks";
 
 // Importing cart context
 import { CartContext } from "../../context/cartContext";
 import ProductDetails from "../../components/Product/ProductDetails";
 
+// TODO
+/**
+ * 
+ * @returns 
+ */
 const Product = () => {
  let { id } = useParams();
  const { data, isLoading, isError } = ApiHook(`https://api.noroff.dev/api/v1/online-shop/${id}`);

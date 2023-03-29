@@ -1,12 +1,15 @@
-// Importing react
+// TODO Chop this up
+
+// Importing React
 import React, { useContext } from "react";
 
+// Importing MUI
 import { Grid } from "@mui/material";
 
-// Importing fetch function
+// Importing function
 import ApiHook from "../../api/ApiHooks";
 
-// Importing cart context
+// Importing context
 import { CartContext } from "../../context/cartContext";
 
 const calculation = (num1, num2) => {

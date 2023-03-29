@@ -1,4 +1,4 @@
-// Importing React elements
+// Importing React
 import { Outlet } from "react-router-dom";
 import styled from "styled-components";
 
@@ -16,6 +16,11 @@ const PageLayout = styled.div`
  height: 100vh;
 `;
 
+// TODO - jsDocs
+/**
+ * 
+ * @returns 
+ */
 const Layout = () => {
     const device = useTheme();
     const isMobile = useMediaQuery(device.breakpoints.down("md"));

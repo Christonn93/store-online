@@ -24,6 +24,12 @@ const Line = styled.hr`
  border-width: 1px 0 0 0;
 `;
 
+// TODO
+/**
+ * 
+ * @param {*} param0 
+ * @returns 
+ */
 const ProductDetails = ({ data, isError, productAmount, cart }) => {
  const { title, tags, description, price, discountedPrice, imageUrl, reviews } = data;
 

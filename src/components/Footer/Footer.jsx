@@ -1,10 +1,12 @@
-// Importing react
+// Importing React
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 // Importing MUI
 import { Box, Container, Grid, Stack, useTheme } from "@mui/material";
+
+// Importing MUI Icons
 import CopyrightIcon from "@mui/icons-material/Copyright";
 
 // Importing Company Logo

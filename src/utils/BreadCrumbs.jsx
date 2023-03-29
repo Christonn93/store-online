@@ -1,16 +1,26 @@
+// Importing React
 import * as React from "react";
+import { Link } from "react-router-dom";
+
+// Importing MUI
 import Typography from "@mui/material/Typography";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
-import Link from "@mui/material/Link";
 
+// Importing function
 import { updateHead } from "../js/headUpdater";
 
+// TODO
+/**
+ * 
+ * @param {*} props 
+ * @returns 
+ */
 function BasicBreadcrumbs(props) {
  updateHead(props.title, props.description);
 
  return (
   <Breadcrumbs aria-label="breadcrumb">
-   <Link underline="hover" color="inherit" to="/">
+   <Link to="/">
     Home
    </Link>
    <Typography color="text.primary">{props.page}</Typography>

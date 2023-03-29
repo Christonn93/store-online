@@ -1,14 +1,14 @@
-// Importing react
+// Importing React
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 
 // Importing MUI
 import { CardActions, Card, CardContent, Typography } from "@mui/material";
 
-// Importing cart context
+// Importing context
 import { CartContext } from "../../context/cartContext";
 
-// Functions to be used in the card display
+// Importing utils
 import AddedToCart from "../../utils/ProductCard/AddedToCart";
 import AddToCart from "../../utils/ProductCard/AddToCart";
 import SaleItem from "../../utils/ProductCard/SaleItem";
@@ -17,7 +17,6 @@ import Discount from "../../utils/ProductCard/Discount";
 import NoDiscount from "../../utils/ProductCard/NoDiscount";
 
 // Adding some custom style to elements
-
 const linkStyle = {
  textDecoration: "none",
  color: "black",

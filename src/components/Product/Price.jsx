@@ -1,5 +1,12 @@
+// Importing React
 import React from "react";
 
+// TODO
+/**
+ * 
+ * @param {*} data 
+ * @returns 
+ */
 const Price = (data) => {
  return (
   <>

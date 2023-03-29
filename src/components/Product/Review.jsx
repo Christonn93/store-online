@@ -1,8 +1,15 @@
+// Importing React
 import React from "react";
 
-// Importing mui items
+// Importing MUI
 import { Card, Typography, CardContent, Rating } from "@mui/material";
 
+// TODO
+/**
+ * 
+ * @param {*} param0 
+ * @returns 
+ */
 const Review = ({ data }) => {
  return (
   <>

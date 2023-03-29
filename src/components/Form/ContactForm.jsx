@@ -1,28 +1,29 @@
-// Importing react
+// Importing React
 import React, { useState } from "react";
 
 // Importing MUI
 import { Button, TextField, Box, Container, InputAdornment, Checkbox } from "@mui/material";
 
-// Importing icons
+// Importing MUI Icons
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import TitleIcon from "@mui/icons-material/Title";
 import SubjectIcon from "@mui/icons-material/Subject";
 
-// Importing Dialog
-
 // Importing formik
 import { Formik } from "formik";
 import * as yup from "yup";
 
-const ContactForm = () => {
-    const [isChecked, setIsChecked] = useState(false);
+// TODO
+/**
+ * 
+ * @param {*} param0 
+ * @returns 
+ */
+const ContactForm = ({formSubmit}) => {
+ const [isChecked, setIsChecked] = useState(false);
 
- const formSubmit = (values) => {
-  console.log(values);
- };
 
  const initialValues = {
   name: "",
@@ -155,10 +156,10 @@ const ContactForm = () => {
          }}
         />
         <Box display="flex" justifyContent="end" mt="20px">
-         <Checkbox checked={isChecked} onChange={(e) => setIsChecked(e.target.checked)}/>
+         <Checkbox checked={isChecked} onChange={(e) => setIsChecked(e.target.checked)} />
          <p>By sending this form I agree til the terms of use</p>
         </Box>
-        <Button type="submit" color="secondary" variant="contained"  disabled={!isChecked}>
+        <Button type="submit" color="secondary" variant="contained" disabled={!isChecked}>
          Send
         </Button>
        </Box>

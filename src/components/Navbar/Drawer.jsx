@@ -1,22 +1,21 @@
-// React
+// Importing React
 import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 
-// MUI
+// Importing MUI
 import { Button, Tooltip, IconButton, Drawer, List, ListItem, ListItemText, Badge, Box, useTheme } from "@mui/material";
 import { Menu } from "@mui/icons-material";
 
-// MUI Icons
+// Importing MUI Icons
 import CartIcon from "../../assets/CartIcon";
 import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 
-// Importing Color context
+// Importing context
 import { ColorModeContext } from "../../layout/Theme";
-
-// Importing cart context
 import { CartContext } from "../../context/cartContext";
 
+// TODO - jsDocs
 function DrawerComponent() {
  const theme = useTheme();
  const colorMode = useContext(ColorModeContext);

@@ -1,11 +1,11 @@
-// Importing react
+// Importing React
 import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 
 // Importing MUI
 import { Paper, BottomNavigationAction, BottomNavigation, useTheme } from "@mui/material";
 
-// MUI Icons
+// Importing MUI Icons
 import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 import ContactPhoneIcon from "@mui/icons-material/ContactPhone";
@@ -18,6 +18,7 @@ import CartIcon from "../../assets/CartIcon";
 import { CartContext } from "../../context/cartContext";
 import { ColorModeContext } from "../../layout/Theme";
 
+// TODO - jsDocs
 /**
  *
  * @returns

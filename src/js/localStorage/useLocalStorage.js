@@ -1,10 +1,10 @@
+// Importing React
 import { useState } from "react";
 
-
 /**
- * Function to store items in local storage. 
- * 
- * 
+ * Function to store items in local storage.
+ *
+ *
  * @param {*} key
  * @param {*} initialValue
  * @returns

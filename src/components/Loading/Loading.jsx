@@ -1,10 +1,13 @@
+// Importing React
 import React from "react";
 
-// Importing mui items
+// Importing MUI
 import { Box } from "@mui/material";
 
+// Importing Style
 import "./Loading.css"
 
+// TODO - jsDocs
 const Loading = () => {
  return (
   <Box boxShadow="outline" p="6" rounded="md" bg="white" margin={5}>

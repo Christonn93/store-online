@@ -1,3 +1,5 @@
+// TODO - jsDocs
+// Importing function
 import ApiHook from "../../api/ApiHooks";
 
 const SumCalculation = ({ id }) => {

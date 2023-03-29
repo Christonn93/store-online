@@ -1,4 +1,6 @@
-// Importing react
+// TODO - relocate style elements
+
+// Importing React
 import React from "react";
 import styled from "styled-components";
 

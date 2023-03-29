@@ -1,6 +1,14 @@
-import { Container, Paper } from "@mui/material";
+// Importing React
 import React from "react";
 
+// Importing MUI
+import { Container, Paper } from "@mui/material";
+
+// TODO
+/**
+ * 
+ * @returns 
+ */
 const Privacy = () => {
  return (
   <Container>

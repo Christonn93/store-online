@@ -1,7 +1,15 @@
+// Importing React
 import React from "react";
 
+// Importing MUI
 import { Box } from "@mui/material";
 
+// TODO
+/**
+ * 
+ * @param {*} param0 
+ * @returns 
+ */
 const Description = ({ data }) => {
  return (
   <Box>

@@ -1,5 +1,12 @@
+// Importing React
 import React from "react";
 
+// TODO
+/**
+ * 
+ * @param {*} tags 
+ * @returns 
+ */
 const Tags = (tags) => {
  const tag = tags.join(", ");
 

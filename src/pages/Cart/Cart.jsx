@@ -1,4 +1,4 @@
-// Importing react
+// Importing React
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 
@@ -25,6 +25,11 @@ const StyledLinkBlack = {
  textAlign: "start",
 };
 
+// TODO
+/**
+ * 
+ * @returns 
+ */
 const Cart = () => {
  // Getting the cart context
  const cart = useContext(CartContext);

@@ -1,9 +1,19 @@
+// Importing React
 import React from "react";
 
 import { Box, Divider, Stack, Alert, Paper, Grid } from "@mui/material";
+
+// Importing components
 import CheckOutButton from "./CheckOutButton";
 import ItemListing from "./ItemListing";
 
+
+// TODO - Need jsdocs fillout
+/**
+ * 
+ * @param { id, cart }  
+ * @returns 
+ */
 const CartSummary = ({ id, cart }) => {
  const products = cart.items.reduce((sum, product) => sum + product.quantity, 0);
 

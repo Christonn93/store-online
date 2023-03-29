@@ -1,7 +1,14 @@
+// Importing React
 import React from "react";
 
+// Importing MUI
 import { Box, Button } from "@mui/material";
 
+/**
+ *
+ * @param {{ cart, state }}
+ * @returns
+ */
 const CheckOutButton = ({ cart, state }) => {
  return (
   <Box my={2}>

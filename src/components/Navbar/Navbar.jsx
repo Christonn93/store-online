@@ -1,15 +1,12 @@
-// Importing react
+// Importing React
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-// Importing Color context
-import { ColorModeContext } from "../../layout/Theme";
-
-// Importing MUI components
+// Importing MUI
 import { Toolbar, CssBaseline, Button, Tooltip, IconButton, useMediaQuery, useTheme, Box, Grid, Badge, Stack } from "@mui/material";
 
-// MUI Icons
+// Importing MUI Icons
 import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 
@@ -18,8 +15,9 @@ import CartIcon from "../../assets/CartIcon";
 import Logo from "../../assets/images/color-noBG.png";
 import LogoDark from "../../assets/images/white-noBG.png";
 
-// Importing cart context
+// Importing context
 import { CartContext } from "../../context/cartContext";
+import { ColorModeContext } from "../../layout/Theme";
 
 // Styling company logo
 const CompanyLogo = styled.img`

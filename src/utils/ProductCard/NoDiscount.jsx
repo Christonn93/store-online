@@ -1,4 +1,4 @@
-// Importing react
+// Importing React
 import React from "react";
 
 // Importing MUI

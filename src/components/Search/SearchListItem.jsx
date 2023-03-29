@@ -1,8 +1,8 @@
-// Importing react
+// Importing React
 import React from "react";
 import { Link } from "react-router-dom";
 
-// Importing mui items
+// Importing MUI
 import { Button } from "@mui/material";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 
@@ -23,6 +23,8 @@ const List = {
  justifyContent: "space-between",
 };
 
+
+// TODO - jsDocs
 const SearchListItem = ({ props, option }) => {
  return (
   <li {...props} key={option.id} style={List}>
