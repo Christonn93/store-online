@@ -27,6 +27,8 @@ const Home = () => {
 
  updateHead("Home", "Store Online home page. We offer a range of items that will suite your needs");
 
+
+
  return (
   <Container
    align="center"
