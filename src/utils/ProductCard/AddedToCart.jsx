@@ -16,11 +16,15 @@ const AddedToCart = ({ product, productAmount, cart }) => {
    <Tooltip title="Added to cart">
     <Badge badgeContent={productAmount} color="secondary">
      <Button
-      color="success"
+      color="ctaSuccess"
       onClick={() => {
        cart.addToCart(product.id);
       }}
       variant="contained"
+      size="large"
+      sx={{
+        color: "text.main"
+     }}
      >
       Added to cart
      </Button>

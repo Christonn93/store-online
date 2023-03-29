@@ -8,13 +8,10 @@ import { CardActions, Card, CardContent, Typography } from "@mui/material";
 // Importing context
 import { CartContext } from "../../context/cartContext";
 
-// Importing utils
-import AddedToCart from "../../utils/ProductCard/AddedToCart";
-import AddToCart from "../../utils/ProductCard/AddToCart";
-import SaleItem from "../../utils/ProductCard/SaleItem";
-import NonSaleItem from "../../utils/ProductCard/NoSaleItem";
-import Discount from "../../utils/ProductCard/Discount";
-import NoDiscount from "../../utils/ProductCard/NoDiscount";
+// Importing components
+import CardButton from "../Button/CardButton";
+import CardImage from "../Image/CardImage";
+import CardPrice from "../Price/CardPrice";
 
 // Adding some custom style to elements
 const linkStyle = {
@@ -43,15 +40,21 @@ const ProductCard = ({ product }) => {
    key={product.id}
   >
    <Link to={`/product/${product.id}`} style={linkStyle}>
-    {product.discountedPrice < product.price ? <SaleItem product={product} /> : <NonSaleItem product={product} />}
+    {product.discountedPrice < product.price ? <CardImage product={product} state={true} /> : <CardImage product={product} state={false} />}
     <CardContent>
      <Typography gutterBottom variant="h4" component="div">
       {product.title}
      </Typography>
-     {product.discountedPrice < product.price ? <Discount product={product} /> : <NoDiscount product={product} />}
+     {product.discountedPrice < product.price ? <CardPrice product={product} state={true} /> : <CardPrice product={product} state={false} />}
     </CardContent>
    </Link>
-   <CardActions>{productAmount > 0 ? <AddedToCart product={product} productAmount={productAmount} cart={cart} /> : <AddToCart product={product} cart={cart} />}</CardActions>
+   <CardActions>
+    {productAmount > 0 ? (
+     <CardButton product={product} productAmount={productAmount} cart={cart} state={true} />
+    ) : (
+     <CardButton product={product} productAmount={productAmount} cart={cart} state={false} />
+    )}
+   </CardActions>
   </Card>
  );
 };

@@ -20,6 +20,10 @@ const AddToCart = ({ product, cart }) => {
       cart.addToCart(product.id, product.discountedPrice);
      }}
      variant="contained"
+     size="large"
+     sx={{
+        color: "text.secondary"
+     }}
     >
      Add to cart
     </Button>

@@ -60,15 +60,15 @@ export const tokens = (mode) => ({
       900: "#0f2922",
      },
      redAccent: {
-      100: "#f8dcdb",
-      200: "#f1b9b7",
-      300: "#e99592",
-      400: "#e2726e",
-      500: "#db4f4a",
-      600: "#af3f3b",
-      700: "#832f2c",
-      800: "#58201e",
-      900: "#2c100f",
+      100: "#f2d1cf",
+      200: "#e5a2a0",
+      300: "#d97470",
+      400: "#cc4541",
+      500: "#bf1711",
+      600: "#99120e",
+      700: "#730e0a",
+      800: "#4c0907",
+      900: "#260503",
      },
      blueAccent: {
       100: "#000914",
@@ -117,15 +117,15 @@ export const tokens = (mode) => ({
       900: "#dbf5ee",
      },
      redAccent: {
-      100: "#2c100f",
-      200: "#58201e",
-      300: "#832f2c",
-      400: "#af3f3b",
-      500: "#db4f4a",
-      600: "#e2726e",
-      700: "#e99592",
-      800: "#f1b9b7",
-      900: "#f8dcdb",
+      100: "#260503",
+      200: "#4c0907",
+      300: "#730e0a",
+      400: "#99120e",
+      500: "#bf1711",
+      600: "#cc4541",
+      700: "#d97470",
+      800: "#e5a2a0",
+      900: "#f2d1cf",
      },
      blueAccent: {
       100: "#ccd5e0",
@@ -157,7 +157,10 @@ export const themeSettings = (mode) => {
         main: colors.greenAccent[500],
        },
        cta: {
-        main: colors.blueAccent[300],
+        main: colors.redAccent[500],
+       },
+       ctaSuccess: {
+         main: colors.greenAccent[300]
        },
        neutral: {
         dark: colors.grey[700],
@@ -168,7 +171,8 @@ export const themeSettings = (mode) => {
         default: "#253f58",
        },
        text: {
-        primary: "#fff",
+        main: "#000",
+        secondary: "#fff",
        },
        navText: {
         main: colors.greenAccent[500],
@@ -182,7 +186,10 @@ export const themeSettings = (mode) => {
         main: colors.greenAccent[500],
        },
        cta: {
-        main: colors.blueAccent[400],
+        main: colors.redAccent[500],
+       },
+       ctaSuccess: {
+         main: colors.greenAccent[700]
        },
        neutral: {
         dark: colors.grey[700],
@@ -193,7 +200,8 @@ export const themeSettings = (mode) => {
         default: "#fcfcfc",
        },
        text: {
-        primary: "#000",
+        main: "#000",
+        secondary: "#fff",
        },
        navText: {
         main: "#000",

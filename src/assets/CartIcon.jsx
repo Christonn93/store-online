@@ -16,7 +16,7 @@ const CartIcon = ({ amount }) => {
  return (
   <IconButton aria-label="cart">
    <Badge badgeContent={amount} color="secondary">
-    <ShoppingCartIcon color="secondary" value={amount} />
+    <ShoppingCartIcon color="navText" value={amount} />
    </Badge>
   </IconButton>
  );
