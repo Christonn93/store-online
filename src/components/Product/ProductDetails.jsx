@@ -6,7 +6,7 @@ import styled from "styled-components";
 import { Box, Grid, Paper } from "@mui/material";
 
 // Importing utils
-import ErrorResponse from "../../utils/ErrorResponse";
+import ErrorFeedback from "../Feedback/ErrorFeedback";
 
 // Importing components
 import Review from "./Review";
@@ -36,7 +36,7 @@ const ProductDetails = ({ data, isError, productAmount, cart }) => {
  return (
   <>
    {isError ? (
-    <ErrorResponse severity="error" title="Oh NO!" content="Obs. We could not load your data. Please try again later" />
+    <ErrorFeedback variant="outlined" title="Oh NO!" body="Obs. We could not load your data. Please try again later" />
    ) : (
     <Box sx={{ flexGrow: 1 }} id="productBox">
      <Paper elevation={0} square={false}>

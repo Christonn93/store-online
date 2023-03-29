@@ -14,7 +14,7 @@
   .loader-wheel {
     animation: spin 1s infinite linear;
     border: 2px solid rgba(30, 30, 30, 0.5);
-    border-left: 4px solid black;
+    border-left: 4px solid #4cceac;
     border-radius: 50%;
     height: 50px;
     margin-bottom: 10px;
@@ -22,8 +22,7 @@
   }
   
   .loader-text {
-    color: black;
-    font-family: arial, sans-serif;
+    color: #4cceac;
   }
   
   .loader-text:after {

@@ -5,16 +5,18 @@ import { useParams } from "react-router-dom";
 // Importing MUI
 import { Box, Container } from "@mui/material";
 
+// Importing components
+import ProductDetails from "../../components/Product/ProductDetails";
+import Loading from "../../components/Loading/Loading";
+
 // Importing utils
-import BasicBreadcrumbs from "../../utils/BreadCrumbs";
-import LoadingAnimation from "../../utils/LoadingAnimation";
+import BasicBreadcrumbs from "../../components/Breadcrumbs/BreadCrumb";
 
 // Importing functions
 import ApiHook from "../../api/ApiHooks";
 
 // Importing cart context
 import { CartContext } from "../../context/cartContext";
-import ProductDetails from "../../components/Product/ProductDetails";
 
 // TODO
 /**
@@ -34,7 +36,7 @@ const Product = () => {
    <Container sx={{ mb: 3 }}>
     <BasicBreadcrumbs title={data.title} page={data.title} description={data.description} />
    </Container>
-   {isLoading ? <LoadingAnimation /> : <ProductDetails data={data} isError={isError} productAmount={productAmount} cart={cart} />}
+   {isLoading ? <Loading /> : <ProductDetails data={data} isError={isError} productAmount={productAmount} cart={cart} />}
   </Box>
  );
 };

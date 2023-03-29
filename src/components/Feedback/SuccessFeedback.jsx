@@ -12,12 +12,13 @@ import ButtonComponent from "../Button/ButtonComponent";
  * @param { title, body, option, elevation, variant }
  * @returns Success feedback to user.
  */
-const SuccessFeedback = ({ title, body, option, elevation, variant }) => {
+const SuccessFeedback = ({ title, body, body2, option, elevation, variant }) => {
  return (
   <Alert severity="success" elevation={elevation} variant={variant}>
    <AlertTitle>{title}</AlertTitle>
    <Container>
     <Typography variant="body1">{body}</Typography>
+    <Typography variant="body1">{body2}</Typography>
     <Box sx={{ mt: 5 }}>
      <ButtonComponent variant="outlined" buttonText="Back to home" link="/" color="success" />
     </Box>

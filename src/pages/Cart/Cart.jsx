@@ -8,11 +8,11 @@ import Grid from "@mui/material/Unstable_Grid2";
 
 // Importing components
 import CartCard from "../../components/Card/CartCard";
-import BasicBreadcrumbs from "../../utils/BreadCrumbs";
-
-// Importing cart context
-import { CartContext } from "../../context/cartContext";
+import BasicBreadcrumbs from "../../components/Breadcrumbs/BreadCrumb";
 import CartSummary from "../../components/Cart/CartSummary";
+
+// Importing context
+import { CartContext } from "../../context/cartContext";
 
 // Setting some style
 const StyledLinkWhite = {

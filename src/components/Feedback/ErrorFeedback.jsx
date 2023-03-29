@@ -2,7 +2,7 @@
 import * as React from "react";
 
 // Importing MUI
-import { Alert, Typography } from "@mui/material";
+import { Alert, AlertTitle, Typography } from "@mui/material";
 
 /**
  *
@@ -11,8 +11,15 @@ import { Alert, Typography } from "@mui/material";
  */
 const ErrorFeedback = ({ title, body, variant }) => {
  return (
-  <Alert variant={variant} severity="error" onClose={() => {}}>
-   <Typography variant="h3">{title}</Typography>
+  <Alert variant={variant} severity="error">
+   <AlertTitle
+    variant="h3"
+    sx={{
+     textAlign: "start",
+    }}
+   >
+    {title}
+   </AlertTitle>
    <Typography variant="body1">{body}</Typography>
   </Alert>
  );

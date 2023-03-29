@@ -7,7 +7,7 @@ import Typography from "@mui/material/Typography";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
 
 // Importing function
-import { updateHead } from "../js/headUpdater";
+import { updateHead } from "../../js/headUpdater";
 
 // TODO
 /**
