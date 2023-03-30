@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 
 // Importing MUI
-import { Button, TextField, Box, Container, InputAdornment, Checkbox } from "@mui/material";
+import { Button, TextField, Box, Container, InputAdornment, Checkbox, useTheme } from "@mui/material";
 
 // Importing MUI Icons
 import AccountCircle from "@mui/icons-material/AccountCircle";
@@ -15,9 +15,6 @@ import SubjectIcon from "@mui/icons-material/Subject";
 import { Formik } from "formik";
 import * as yup from "yup";
 
-// Importing style
-import { labelStyle } from "../../layout/CustomStyling";
-
 /**
  *
  * @param {formSubmit}
@@ -25,6 +22,7 @@ import { labelStyle } from "../../layout/CustomStyling";
  */
 const ContactForm = ({ formSubmit }) => {
  const [isChecked, setIsChecked] = useState(false);
+ const theme = useTheme();
 
  const initialValues = {
   name: "",
@@ -73,7 +71,7 @@ const ContactForm = ({ formSubmit }) => {
            </InputAdornment>
           ),
          }}
-         sx={labelStyle}
+         sx={{  "& .MuiInputLabel-root": { color: theme.palette.mode === "dark" ? "#4cceac" : "#000914" }, }}
         />
         <TextField
          variant="outlined"
@@ -94,7 +92,7 @@ const ContactForm = ({ formSubmit }) => {
            </InputAdornment>
           ),
          }}
-         sx={labelStyle}
+         sx={{  "& .MuiInputLabel-root": { color: theme.palette.mode === "dark" ? "#4cceac" : "#000914" }, }}
         />
         <TextField
          variant="outlined"
@@ -115,7 +113,7 @@ const ContactForm = ({ formSubmit }) => {
            </InputAdornment>
           ),
          }}
-         sx={labelStyle}
+         sx={{  "& .MuiInputLabel-root": { color: theme.palette.mode === "dark" ? "#4cceac" : "#000914" }, }}
         />
         <TextField
          variant="outlined"
@@ -136,7 +134,7 @@ const ContactForm = ({ formSubmit }) => {
            </InputAdornment>
           ),
          }}
-         sx={labelStyle}
+         sx={{  "& .MuiInputLabel-root": { color: theme.palette.mode === "dark" ? "#4cceac" : "#000914" }, }}
         />
         <TextField
          variant="outlined"
@@ -159,10 +157,10 @@ const ContactForm = ({ formSubmit }) => {
            </InputAdornment>
           ),
          }}
-         sx={labelStyle}
+         sx={{  "& .MuiInputLabel-root": { color: theme.palette.mode === "dark" ? "#4cceac" : "#000914" }, }}
         />
         <Box display="flex" justifyContent="end" mt="20px">
-         <Checkbox checked={isChecked} onChange={(e) => setIsChecked(e.target.checked)} />
+         <Checkbox checked={isChecked} onChange={(e) => setIsChecked(e.target.checked)} sx={{ color: theme.palette.mode === "dark" ? "#4cceac" : "#000914" }} />
          <p>By sending this form I agree til the terms of use</p>
         </Box>
         <Button type="submit" color="secondary" variant="contained" disabled={!isChecked}>

@@ -5,7 +5,7 @@ import React from "react";
 import { Rating } from "@mui/material";
 
 const StarRating = (data) => {
- return <Rating name="read-only" value={data.rating} readOnly />;
+ return <Rating name="read-only" value={data.rating} defaultValue={data.rating} max={5} readOnly />;
 };
 
 export default StarRating;

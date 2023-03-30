@@ -52,12 +52,12 @@ export const CompanyLogoFooter = styled.img`
 
 // Used in contact form
 export const labelStyle = {
- "& .MuiFormLabel-root": {
-  color: "secondary.main",
- },
- "& .MuiFormLabel-root.Mui-focused": {
-    color: "secondary.main",
- },
+ //  "& .MuiFormLabel-root": {
+ //   color: "secondary.main",
+ //  },
+ //  "& .MuiFormLabel-root.Mui-focused": {
+ //     color: "secondary.main",
+ //  },
 };
 
 // Used in SearchListItem

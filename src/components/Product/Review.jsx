@@ -2,7 +2,7 @@
 import React from "react";
 
 // Importing MUI
-import { Card, Typography, CardContent, Rating } from "@mui/material";
+import { Card, Typography, CardContent, Rating, useTheme } from "@mui/material";
 
 /**
  *
@@ -10,6 +10,7 @@ import { Card, Typography, CardContent, Rating } from "@mui/material";
  * @returns Display for review content for product
  */
 const Review = ({ data }) => {
+ const theme = useTheme();
  return (
   <>
    {data ? (
@@ -19,7 +20,12 @@ const Review = ({ data }) => {
       <Typography gutterBottom variant="h5" component="div">
        {data.username}
       </Typography>
-      <Typography variant="body2" color="text.secondary">
+      <Typography
+       variant="body2"
+       sx={{
+        color: theme.palette.mode === "dark" ? "white" : "black",
+       }}
+      >
        {data.description}
       </Typography>
      </CardContent>
