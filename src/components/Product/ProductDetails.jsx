@@ -14,6 +14,7 @@ import Description from "./Description";
 import Price from "./Price";
 import Image from "./Image";
 import Buttons from "./Buttons";
+import ReviewForm from "../Form/ReviewForm";
 
 // Styled component
 const Line = styled.hr`
@@ -78,6 +79,7 @@ const ProductDetails = ({ data, isError, productAmount, cart }) => {
           <h3>Reviews</h3>
          </Grid>
          <Grid item xs={12}>
+         <ReviewForm />
           <Grid container direction="column" spacing={2} rowSpacing={2}>
            {reviews &&
             reviews.map((review) => {
