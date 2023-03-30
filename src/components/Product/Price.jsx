@@ -1,11 +1,10 @@
 // Importing React
 import React from "react";
 
-// TODO
 /**
  * 
- * @param {*} data 
- * @returns 
+ * @param {data} data 
+ * @returns return price display for product
  */
 const Price = (data) => {
  return (

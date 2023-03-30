@@ -1,6 +1,5 @@
 // Importing React
 import React from "react";
-import styled from "styled-components";
 
 // Importing MUI
 import { Box, Grid, Paper } from "@mui/material";
@@ -16,20 +15,16 @@ import Image from "./Image";
 import Buttons from "./Buttons";
 import ReviewForm from "../Form/ReviewForm";
 
-// Styled component
-const Line = styled.hr`
- width: 100%;
- height: 5px;
- border-style: solid;
- border-color: hsla(0, 0%, 75%, 0.9);
- border-width: 1px 0 0 0;
-`;
+// Importing style
+import { Line } from "../../layout/CustomStyling";
 
-// TODO
 /**
- * 
- * @param {*} param0 
- * @returns 
+ *
+ * @param {*} data data about product
+ * @param {*} isError Error handling if request for data fails
+ * @param {*} productAmount
+ * @param {*} cart cartContext
+ * @returns Details about the product to be displayed on the product page
  */
 const ProductDetails = ({ data, isError, productAmount, cart }) => {
  const { title, tags, description, price, discountedPrice, imageUrl, reviews } = data;
@@ -79,7 +74,7 @@ const ProductDetails = ({ data, isError, productAmount, cart }) => {
           <h3>Reviews</h3>
          </Grid>
          <Grid item xs={12}>
-         <ReviewForm />
+          <ReviewForm />
           <Grid container direction="column" spacing={2} rowSpacing={2}>
            {reviews &&
             reviews.map((review) => {

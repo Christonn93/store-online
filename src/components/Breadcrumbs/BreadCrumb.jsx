@@ -9,11 +9,10 @@ import Breadcrumbs from "@mui/material/Breadcrumbs";
 // Importing function
 import { updateHead } from "../../js/headUpdater";
 
-// TODO
 /**
  * 
- * @param {*} props 
- * @returns 
+ * @param {props} {props.page}
+ * @returns Breadcrumbs for pages
  */
 function BasicBreadcrumbs(props) {
  updateHead(props.title, props.description);

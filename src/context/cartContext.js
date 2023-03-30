@@ -1,5 +1,3 @@
-// TODO - jsDocs
-
 // Importing React
 import { createContext, useState, useEffect } from "react";
 

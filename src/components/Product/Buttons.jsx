@@ -8,11 +8,10 @@ import { Box, ButtonGroup } from "@mui/material";
 import AddToCart from "../../utils/ProductCard/AddToCart";
 import AddedToCart from "../../utils/ProductCard/AddedToCart";
 
-// TODO
 /**
  * 
- * @param {*} param0 
- * @returns 
+ * @param {productAmount, data, cart}  
+ * @returns Button to use for cart
  */
 const Buttons = ({ productAmount, data, cart }) => {
  return (

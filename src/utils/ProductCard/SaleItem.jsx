@@ -1,37 +1,12 @@
-// TODO - relocate style elements
-
 // Importing React
 import React from "react";
-import styled from "styled-components";
 
 // Importing MUI
 import { Chip } from "@mui/material";
 import { priceDiscount } from "../../js/discountCalculation";
 
-// Adding style
-const ItemImage = styled.div`
- height: 200px;
- border-radius: 0;
- position: relative;
- margin-bottom: 15px;
-
- img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
- }
-`;
-
-const Sale = styled.span`
- position: absolute;
- background-color: red;
- top: -0.5rem;
- left: -0.5rem;
- filter: drop-shadow(2px 2px 8px rgba(0, 0, 0, 0.2));
- font-size: 18px;
- text-align: center;
- border-radius: 5px;
-`;
+// Importing style
+import { ItemImage, Sale } from "../../layout/CustomStyling";
 
 /**
  * SaleItem

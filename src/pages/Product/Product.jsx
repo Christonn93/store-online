@@ -18,10 +18,9 @@ import ApiHook from "../../api/ApiHooks";
 // Importing cart context
 import { CartContext } from "../../context/cartContext";
 
-// TODO
 /**
  * 
- * @returns 
+ * @returns UI for product page
  */
 const Product = () => {
  let { id } = useParams();

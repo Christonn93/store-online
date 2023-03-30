@@ -7,7 +7,10 @@ import { Box, Container } from "@mui/material";
 // Importing components
 import Navbar from "../Navbar/Navbar";
 
-// TODO - jsDocs
+/**
+ * 
+ * @returns Page header whit navigation
+ */
 const PageHeader = () => {
  return (
   <Box width={"100%"} >

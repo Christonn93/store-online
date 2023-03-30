@@ -1,11 +1,10 @@
 // Importing React
 import React from "react";
 
-// TODO
 /**
  * 
- * @param {*} param0 
- * @returns 
+ * @param {data}  
+ * @returns Image for display
  */
 const Image = ({data}) => {
  return <img src={data} alt={data} loading="lazy" />;

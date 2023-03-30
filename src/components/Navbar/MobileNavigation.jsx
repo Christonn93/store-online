@@ -18,10 +18,9 @@ import CartIcon from "../../assets/CartIcon";
 import { CartContext } from "../../context/cartContext";
 import { ColorModeContext } from "../../layout/Theme";
 
-// TODO - jsDocs
 /**
  *
- * @returns
+ * @returns Navigation for mobile. 
  */
 const MobileNavigation = () => {
  const theme = useTheme();

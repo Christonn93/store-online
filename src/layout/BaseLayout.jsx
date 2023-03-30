@@ -16,29 +16,27 @@ const PageLayout = styled.div`
  height: 100vh;
 `;
 
-// TODO - jsDocs
 /**
- * 
- * @returns 
+ *
+ * @returns main layout for the site.
  */
 const Layout = () => {
-    const device = useTheme();
-    const isMobile = useMediaQuery(device.breakpoints.down("md"));
+ const device = useTheme();
+ const isMobile = useMediaQuery(device.breakpoints.down("md"));
 
  return (
   <PageLayout>
    <PageHeader />
-   <Container sx={{
-    mt: 2,
-    mb: 2
-   }}>
+   <Container
+    sx={{
+     mt: 2,
+     mb: 2,
+    }}
+   >
     <Outlet />
    </Container>
    <Footer />
-   {isMobile 
-   ? <MobileNavigation />
-   : <></>
-   }
+   {isMobile ? <MobileNavigation /> : <></>}
   </PageLayout>
  );
 };

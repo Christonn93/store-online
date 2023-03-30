@@ -4,11 +4,10 @@ import React from "react";
 // Importing MUI
 import { Box } from "@mui/material";
 
-// TODO
 /**
  * 
- * @param {*} param0 
- * @returns 
+ * @param {data}  
+ * @returns Return product description based on data input
  */
 const Description = ({ data }) => {
  return (

@@ -4,10 +4,9 @@ import React from "react";
 // Importing MUI
 import { Container, Paper } from "@mui/material";
 
-// TODO
 /**
  * 
- * @returns 
+ * @returns Privacy Policy page. This page content is from the Noroff job with permissions from MJ
  */
 const Privacy = () => {
  return (

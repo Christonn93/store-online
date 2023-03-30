@@ -14,21 +14,12 @@ import CartSummary from "../../components/Cart/CartSummary";
 // Importing context
 import { CartContext } from "../../context/cartContext";
 
-// Setting some style
-const StyledLinkWhite = {
- color: "white",
- textAlign: "start",
-};
+// Importing style
+import { StyledLinkWhite, StyledLinkBlack } from "../../layout/CustomStyling";
 
-const StyledLinkBlack = {
- color: "black",
- textAlign: "start",
-};
-
-// TODO
 /**
- * 
- * @returns 
+ *
+ * @returns Cart page. Where all information about product added and sum of the products
  */
 const Cart = () => {
  // Getting the cart context
@@ -40,9 +31,9 @@ const Cart = () => {
 
  return (
   <>
-  <BasicBreadcrumbs title="Cart" page="Cart" description="Store online Cart summary"/>
+   <BasicBreadcrumbs title="Cart" page="Cart" description="Store online Cart summary" />
    <Box sx={{ flexGrow: 1, marginBottom: 3 }}>
-   <Grid container spacing={2} columns={{ xs: 2, md: 12 }} rowSpacing={3} justifyContent={{ xs: "center", md: "start" }}>
+    <Grid container spacing={2} columns={{ xs: 2, md: 12 }} rowSpacing={3} justifyContent={{ xs: "center", md: "start" }}>
      <Grid item xs={12}>
       <h1>Your cart</h1>
      </Grid>

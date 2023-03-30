@@ -18,11 +18,10 @@ import * as yup from "yup";
 // Importing style
 import { labelStyle } from "../../layout/CustomStyling";
 
-// TODO
 /**
  *
- * @param {*} param0
- * @returns
+ * @param {formSubmit}
+ * @returns Contact form with validation
  */
 const ContactForm = ({ formSubmit }) => {
  const [isChecked, setIsChecked] = useState(false);

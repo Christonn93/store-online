@@ -1,7 +1,11 @@
-// TODO - jsDocs
 // Importing function
 import ApiHook from "../../api/ApiHooks";
 
+/**
+ * 
+ * @param {*} id Need product id to get calculation working.
+ * @returns 
+ */
 const SumCalculation = ({ id }) => {
  const { data } = ApiHook(`https://api.noroff.dev/api/v1/online-shop/${id}`);
 

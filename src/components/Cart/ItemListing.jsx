@@ -1,5 +1,3 @@
-// TODO Chop this up
-
 // Importing React
 import React, { useContext } from "react";
 
@@ -12,14 +10,30 @@ import ApiHook from "../../api/ApiHooks";
 // Importing context
 import { CartContext } from "../../context/cartContext";
 
+/**
+ * 
+ * @param {num1, num2}   
+ * @returns values to use in the itemPrice function
+ */
 const calculation = (num1, num2) => {
  return num1 * num2;
 };
 
+/**
+ * 
+ * @param {*} data 
+ * @param {*} productAmount 
+ * @returns itemPrice calculated
+ */
 export const itemPrice = (data, productAmount) => {
  return calculation(data.discountedPrice, productAmount).toFixed(2);
 };
 
+/**
+ * 
+ * @param {*} id Requiring product id  
+ * @returns ItemListing
+ */
 const ItemListing = ({ id }) => {
  const { data } = ApiHook(`https://api.noroff.dev/api/v1/online-shop/${id}`);
  const cart = useContext(CartContext);

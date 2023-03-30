@@ -7,7 +7,10 @@ import { Box } from "@mui/material";
 // Importing Style
 import "./Loading.css"
 
-// TODO - jsDocs
+/**
+ * 
+ * @returns Loading animation
+ */
 const Loading = () => {
  return (
   <Box boxShadow="outline" p="6" rounded="md" bg="white" margin={5}>

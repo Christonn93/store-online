@@ -9,7 +9,11 @@ import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 // Importing style
 import { linkStyle, p, List } from "../../layout/CustomStyling";
 
-// TODO - jsDocs
+/**
+ *
+ * @param {Props, option}
+ * @returns return list item in autocomplete search bar
+ */
 const SearchListItem = ({ props, option }) => {
  return (
   <li {...props} key={option.id} style={List}>

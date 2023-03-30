@@ -7,12 +7,10 @@ import { Box, Divider, Stack, Alert, Paper, Grid } from "@mui/material";
 import CheckOutButton from "./CheckOutButton";
 import ItemListing from "./ItemListing";
 
-
-// TODO - Need jsdocs fillout
 /**
- * 
- * @param { id, cart }  
- * @returns 
+ *
+ * @param { id, cart }
+ * @returns layout for the summary section in the cart
  */
 const CartSummary = ({ id, cart }) => {
  const products = cart.items.reduce((sum, product) => sum + product.quantity, 0);

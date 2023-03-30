@@ -4,11 +4,10 @@ import React from "react";
 // Importing MUI
 import { Card, Typography, CardContent, Rating } from "@mui/material";
 
-// TODO
 /**
- * 
- * @param {*} param0 
- * @returns 
+ *
+ * @param {{data}} data Needs data prop
+ * @returns Display for review content for product
  */
 const Review = ({ data }) => {
  return (

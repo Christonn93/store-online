@@ -5,10 +5,9 @@ import { Link } from "react-router-dom";
 // Importing MUI
 import { Paper, Container, Typography } from "@mui/material";
 
-// TODO - jsDocs
 /**
  *
- * @returns
+ * @returns UI for 404 status page
  */
 function RouteNotFound() {
  return (

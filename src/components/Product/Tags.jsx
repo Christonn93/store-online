@@ -1,11 +1,11 @@
 // Importing React
 import React from "react";
 
-// TODO
+
 /**
  * 
  * @param {*} tags 
- * @returns 
+ * @returns Tags to be displayed on product page
  */
 const Tags = (tags) => {
  const tag = tags.join(", ");

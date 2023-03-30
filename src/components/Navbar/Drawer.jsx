@@ -15,7 +15,12 @@ import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 import { ColorModeContext } from "../../layout/Theme";
 import { CartContext } from "../../context/cartContext";
 
-// TODO - jsDocs
+/**
+ * 
+ * @returns MUI Drawer for mobile navigation. 
+ * 
+ * @info This is not in use. Saved it here because it was in use before i changed to bottom navigation 
+ */
 function DrawerComponent() {
  const theme = useTheme();
  const colorMode = useContext(ColorModeContext);

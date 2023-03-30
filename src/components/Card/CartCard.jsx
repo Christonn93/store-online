@@ -16,11 +16,10 @@ import ApiHook from "../../api/ApiHooks";
 // Importing context
 import { CartContext } from "../../context/cartContext";
 
-// TODO - jsdoc's need to be filled out
 /**
  *
- * @param {*} param0
- * @returns
+ * @param {id} Need to use the product id to get the desired information
+ * @returns a card to list in the cart
  */
 const CartCard = ({ id }) => {
  const { data } = ApiHook(`https://api.noroff.dev/api/v1/online-shop/${id}`);
