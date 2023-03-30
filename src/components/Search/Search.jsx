@@ -1,8 +1,8 @@
-// Importing react
+// Importing React
 import React from "react";
 
 // Importing MUI
-import { TextField, Autocomplete } from "@mui/material";
+import { TextField, Autocomplete, useTheme } from "@mui/material";
 
 // Importing components
 import SearchListItem from "./SearchListItem";
@@ -15,6 +15,8 @@ import SearchListItem from "./SearchListItem";
  * @returns User search results will display
  */
 const SearchBar = ({ searchInput, setSearchInput, data }) => {
+ const theme = useTheme();
+
  const option = data.map((e) => {
   let productItems = { label: e.title, id: e.id };
   return productItems;
@@ -28,9 +30,9 @@ const SearchBar = ({ searchInput, setSearchInput, data }) => {
     handleHomeEndKeys
     disableClearable
     freeSolo
-    sx={{ 
-        width: 240,
-        }}
+    sx={{
+     width: 240,
+    }}
     id="SearchBar"
     options={option}
     noOptionsText={"No match found"}
@@ -71,6 +73,12 @@ const SearchBar = ({ searchInput, setSearchInput, data }) => {
       id="search-textField"
       label="Search products"
       variant="outlined"
+      sx={{
+       "& .MuiInputLabel-root": { color: theme.palette.mode === "dark" ? "#4cceac" : "#000914" },
+       "& .MuiOutlinedInput-root": {
+        "& > fieldset": { borderColor: theme.palette.mode === "dark" ? "#4cceac" : "#000914" },
+       },
+      }}
       InputLabelProps={{
        color: "secondary",
       }}
