@@ -9,6 +9,8 @@ import ProductCard from "../../components/Card/ProductCard";
 import SearchBar from "../../components/Search/Search";
 import Loading from "../../components/Loading/Loading";
 import ErrorFeedback from "../../components/Feedback/ErrorFeedback";
+
+// Importing page content
 import HomeContent from "./HomeContent";
 
 // Importing function
@@ -26,8 +28,6 @@ const Home = () => {
  const { data, isLoading, isError } = ApiHook("https://api.noroff.dev/api/v1/online-shop");
 
  updateHead("Home", "Store Online home page. We offer a range of items that will suite your needs");
-
-
 
  return (
   <Container

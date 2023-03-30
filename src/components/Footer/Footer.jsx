@@ -1,7 +1,6 @@
 // Importing React
 import React from "react";
 import { Link } from "react-router-dom";
-import styled from "styled-components";
 
 // Importing MUI
 import { Box, Container, Grid, Stack, useTheme } from "@mui/material";
@@ -13,28 +12,8 @@ import CopyrightIcon from "@mui/icons-material/Copyright";
 import Logo from "../../assets/images/color-noBG.png";
 import LogoDark from "../../assets/images/white-noBG.png";
 
-// Adding some style
-const Inline = {
- display: "flex",
- justifyContent: "center",
-};
-
-// Styling company logo
-const CompanyLogo = styled.img`
-  width: 100%;
-  height: 100px;
-  object-fit: contain;
-`;
-
-const StyledLinkWhite = {
- color: "white",
- textAlign: "start",
-};
-
-const StyledLinkBlack = {
- color: "black",
- textAlign: "start",
-};
+// Importing style
+import { CompanyLogoFooter, StyledLinkBlack, StyledLinkWhite, Inline } from "../../layout/CustomStyling";
 
 /**
  *
@@ -50,7 +29,7 @@ const Footer = () => {
    <Container>
     <Grid container spacing={2} columns={{ xs: 2, md: 12 }} rowSpacing={3} alignItems="center">
      <Grid item xs alignItems="center" align="center" order={{ xs: 1, md: 1, lg: 1 }}>
-      <Link to="/">{theme.palette.mode === "dark" ? <CompanyLogo src={LogoDark} alt="Logo" loading="lazy" /> : <CompanyLogo src={Logo} alt="Logo" loading="lazy" />}</Link>
+      <Link to="/">{theme.palette.mode === "dark" ? <CompanyLogoFooter src={LogoDark} alt="Logo" loading="lazy" /> : <CompanyLogoFooter src={Logo} alt="Logo" loading="lazy" />}</Link>
      </Grid>
      <Grid item xs={6} alignItems="center" align="center" order={{ xs: 3, md: 3, lg: 2 }}>
       <p style={Inline}>

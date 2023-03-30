@@ -15,15 +15,17 @@ import SubjectIcon from "@mui/icons-material/Subject";
 import { Formik } from "formik";
 import * as yup from "yup";
 
+// Importing style
+import { labelStyle } from "../../layout/CustomStyling";
+
 // TODO
 /**
- * 
- * @param {*} param0 
- * @returns 
+ *
+ * @param {*} param0
+ * @returns
  */
-const ContactForm = ({formSubmit}) => {
+const ContactForm = ({ formSubmit }) => {
  const [isChecked, setIsChecked] = useState(false);
-
 
  const initialValues = {
   name: "",
@@ -72,6 +74,7 @@ const ContactForm = ({formSubmit}) => {
            </InputAdornment>
           ),
          }}
+         sx={labelStyle}
         />
         <TextField
          variant="outlined"
@@ -92,6 +95,7 @@ const ContactForm = ({formSubmit}) => {
            </InputAdornment>
           ),
          }}
+         sx={labelStyle}
         />
         <TextField
          variant="outlined"
@@ -112,6 +116,7 @@ const ContactForm = ({formSubmit}) => {
            </InputAdornment>
           ),
          }}
+         sx={labelStyle}
         />
         <TextField
          variant="outlined"
@@ -132,6 +137,7 @@ const ContactForm = ({formSubmit}) => {
            </InputAdornment>
           ),
          }}
+         sx={labelStyle}
         />
         <TextField
          variant="outlined"
@@ -154,6 +160,7 @@ const ContactForm = ({formSubmit}) => {
            </InputAdornment>
           ),
          }}
+         sx={labelStyle}
         />
         <Box display="flex" justifyContent="end" mt="20px">
          <Checkbox checked={isChecked} onChange={(e) => setIsChecked(e.target.checked)} />

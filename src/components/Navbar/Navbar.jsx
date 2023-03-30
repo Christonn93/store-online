@@ -1,7 +1,6 @@
 // Importing React
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import styled from "styled-components";
 
 // Importing MUI
 import { Toolbar, CssBaseline, Button, Tooltip, IconButton, useMediaQuery, useTheme, Box, Grid, Badge, Stack } from "@mui/material";
@@ -19,10 +18,8 @@ import LogoDark from "../../assets/images/white-noBG.png";
 import { CartContext } from "../../context/cartContext";
 import { ColorModeContext } from "../../layout/Theme";
 
-// Styling company logo
-const CompanyLogo = styled.img`
- height: 150px;
-`;
+// Importing style
+import { CompanyLogo } from "../../layout/CustomStyling";
 
 /**
  * The main navigation for the site

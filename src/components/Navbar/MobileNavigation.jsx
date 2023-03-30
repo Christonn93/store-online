@@ -42,10 +42,10 @@ const MobileNavigation = () => {
      setValue(newValue);
     }}
    >
-    <BottomNavigationAction component={Link} to="/" icon={<HomeIcon color="secondary" />} />
+    <BottomNavigationAction component={Link} to="/" icon={<HomeIcon color="navText" />} />
     <BottomNavigationAction component={Link} to="/cart" value={cartTotal} icon={<CartIcon amount={cartTotal} />} />
-    <BottomNavigationAction component={Link} to="/contact" icon={<ContactPhoneIcon color="secondary" />} />
-    <BottomNavigationAction onClick={colorMode.toggleColorMode} icon={theme.palette.mode === "dark" ? <DarkModeOutlinedIcon /> : <LightModeOutlinedIcon />} />
+    <BottomNavigationAction component={Link} to="/contact" icon={<ContactPhoneIcon color="navText" />} />
+    <BottomNavigationAction onClick={colorMode.toggleColorMode} icon={theme.palette.mode === "dark" ? <DarkModeOutlinedIcon color="navText"/> : <LightModeOutlinedIcon color="navText"/>} />
    </BottomNavigation>
   </Paper>
  );

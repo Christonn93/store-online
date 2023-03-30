@@ -13,11 +13,8 @@ import CardButton from "../Button/CardButton";
 import CardImage from "../Image/CardImage";
 import CardPrice from "../Price/CardPrice";
 
-// Adding some custom style to elements
-const linkStyle = {
- textDecoration: "none",
- color: "black",
-};
+// Importing style
+import { linkStyle } from "../../layout/CustomStyling";
 
 /**
  * ProductCard

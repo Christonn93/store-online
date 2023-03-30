@@ -6,29 +6,14 @@ import { Link } from "react-router-dom";
 import { Button } from "@mui/material";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 
-// Adding style
-const linkStyle = {
- textDecoration: "none",
- color: "black",
- textTransform: "initial",
-};
-
-const P = {
- margin: "0",
- padding: "0",
-};
-
-const List = {
- display: "flex",
- justifyContent: "space-between",
-};
-
+// Importing style
+import { linkStyle, p, List } from "../../layout/CustomStyling";
 
 // TODO - jsDocs
 const SearchListItem = ({ props, option }) => {
  return (
   <li {...props} key={option.id} style={List}>
-   <p style={P}>{option.label}</p>
+   <p style={p}>{option.label}</p>
    <Link to={`/product/${option.id}`} style={linkStyle}>
     <Button variant="outlined" color="secondary">
      View <ArrowRightIcon fontSize="small" />
