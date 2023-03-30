@@ -20,7 +20,7 @@ import { ColorModeContext } from "../../layout/Theme";
 
 /**
  *
- * @returns Navigation for mobile. 
+ * @returns Navigation for mobile.
  */
 const MobileNavigation = () => {
  const theme = useTheme();
@@ -44,7 +44,7 @@ const MobileNavigation = () => {
     <BottomNavigationAction component={Link} to="/" icon={<HomeIcon color="navText" />} />
     <BottomNavigationAction component={Link} to="/cart" value={cartTotal} icon={<CartIcon amount={cartTotal} />} />
     <BottomNavigationAction component={Link} to="/contact" icon={<ContactPhoneIcon color="navText" />} />
-    <BottomNavigationAction onClick={colorMode.toggleColorMode} icon={theme.palette.mode === "dark" ? <DarkModeOutlinedIcon color="navText"/> : <LightModeOutlinedIcon color="navText"/>} />
+    <BottomNavigationAction onClick={colorMode.toggleColorMode} icon={theme.palette.mode === "dark" ? <DarkModeOutlinedIcon color="navText" /> : <LightModeOutlinedIcon color="navText" />} />
    </BottomNavigation>
   </Paper>
  );

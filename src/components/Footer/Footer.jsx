@@ -8,12 +8,11 @@ import { Box, Container, Grid, Stack, useTheme } from "@mui/material";
 // Importing MUI Icons
 import CopyrightIcon from "@mui/icons-material/Copyright";
 
-// Importing Company Logo
-import Logo from "../../assets/images/color-noBG.png";
-import LogoDark from "../../assets/images/white-noBG.png";
+// Importing components
+import LogoDisplay from "../CompanyLogo/LogoDisplay";
 
 // Importing style
-import { CompanyLogoFooter, StyledLinkBlack, StyledLinkWhite, Inline } from "../../layout/CustomStyling";
+import { StyledLinkBlack, StyledLinkWhite, Inline } from "../../layout/CustomStyling";
 
 /**
  *
@@ -25,11 +24,15 @@ const Footer = () => {
  const year = date.getFullYear();
 
  return (
-  <Box width={"100%"}>
+  <Box sx={{
+    width: "100%",
+    marginTop: 3,
+    padding: 2
+  }}>
    <Container>
     <Grid container spacing={2} columns={{ xs: 2, md: 12 }} rowSpacing={3} alignItems="center">
      <Grid item xs alignItems="center" align="center" order={{ xs: 1, md: 1, lg: 1 }}>
-      <Link to="/">{theme.palette.mode === "dark" ? <CompanyLogoFooter src={LogoDark} alt="Logo" loading="lazy" /> : <CompanyLogoFooter src={Logo} alt="Logo" loading="lazy" />}</Link>
+      <LogoDisplay themeData={theme} />
      </Grid>
      <Grid item xs={6} alignItems="center" align="center" order={{ xs: 3, md: 3, lg: 2 }}>
       <p style={Inline}>

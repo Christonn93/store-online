@@ -28,7 +28,9 @@ const SearchBar = ({ searchInput, setSearchInput, data }) => {
     handleHomeEndKeys
     disableClearable
     freeSolo
-    sx={{ width: 240 }}
+    sx={{ 
+        width: 240,
+        }}
     id="SearchBar"
     options={option}
     noOptionsText={"No match found"}
@@ -66,8 +68,12 @@ const SearchBar = ({ searchInput, setSearchInput, data }) => {
     renderInput={(params) => (
      <TextField
       {...params}
-      id="outlined-controlled"
+      id="search-textField"
       label="Search products"
+      variant="outlined"
+      InputLabelProps={{
+       color: "secondary",
+      }}
       onChange={(e) => {
        setSearchInput(e.target.value);
       }}

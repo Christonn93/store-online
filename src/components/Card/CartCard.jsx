@@ -33,7 +33,7 @@ const CartCard = ({ id }) => {
      <Box sx={{ display: "flex", flexDirection: "row", flex: "1 1 auto", justifyContent: "space-between", alignItems: "center" }}>
       <Box>
        <Link to={`/product/${data.id}`}>
-        <Typography variant="h3" color="white">
+        <Typography variant="h3" color="text.primary">
          {data.title}
         </Typography>
        </Link>

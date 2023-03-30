@@ -18,8 +18,8 @@ function BasicBreadcrumbs(props) {
  updateHead(props.title, props.description);
 
  return (
-  <Breadcrumbs aria-label="breadcrumb">
-   <Link to="/">
+  <Breadcrumbs aria-label="breadcrumb" color="text.primary">
+   <Link to="/" color="text.primary">
     Home
    </Link>
    <Typography color="text.primary">{props.page}</Typography>

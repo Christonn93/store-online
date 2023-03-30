@@ -200,7 +200,7 @@ export const themeSettings = (mode) => {
         light: colors.grey[100],
        },
        background: {
-        default: "#fcfcfc",
+        default: "#e3e3e3",
        },
        text: {
         main: "#000",
