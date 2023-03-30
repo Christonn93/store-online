@@ -160,7 +160,7 @@ export const themeSettings = (mode) => {
         main: colors.redAccent[500],
        },
        ctaSuccess: {
-         main: colors.greenAccent[300]
+        main: colors.greenAccent[300],
        },
        neutral: {
         dark: colors.grey[700],
@@ -177,6 +177,9 @@ export const themeSettings = (mode) => {
        navText: {
         main: colors.greenAccent[500],
        },
+       input: {
+        main: "#000",
+       },
       }
     : {
        primary: {
@@ -189,7 +192,7 @@ export const themeSettings = (mode) => {
         main: colors.redAccent[500],
        },
        ctaSuccess: {
-         main: colors.greenAccent[700]
+        main: colors.greenAccent[700],
        },
        neutral: {
         dark: colors.grey[700],
@@ -204,6 +207,9 @@ export const themeSettings = (mode) => {
         secondary: "#fff",
        },
        navText: {
+        main: "#000",
+       },
+       input: {
         main: "#000",
        },
       }),
@@ -235,6 +241,14 @@ export const themeSettings = (mode) => {
     fontFamily: ["Source Sans Pro", "sans-serif"].join(","),
     fontSize: 14,
    },
+  },
+  textField: {
+   width: "90%",
+   marginLeft: "auto",
+   marginRight: "auto",
+   paddingBottom: 0,
+   marginTop: 0,
+   fontWeight: 500,
   },
  };
 };
