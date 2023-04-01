@@ -3,8 +3,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 // Importing assets
-import LogoDark from "../../assets/images/white-noBG.png";
-import Logo from "../../assets/images/color-noBG.png";
+import LogoDark from "../../assets/images/white-noBG-min.png";
+import Logo from "../../assets/images/color-noBG-min.png";
 
 // Importing style
 import { CompanyLogo } from "../../layout/CustomStyling";
