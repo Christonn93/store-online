@@ -19,7 +19,7 @@ function BasicBreadcrumbs(props) {
 
  return (
   <Breadcrumbs aria-label="breadcrumb" color="text.primary">
-   <Link to="/" color="text.primary">
+   <Link to="/" className="breadcrumbs-nav">
     Home
    </Link>
    <Typography color="text.primary">{props.page}</Typography>

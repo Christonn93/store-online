@@ -1,6 +1,9 @@
 a {
     text-decoration: none;
-    color: black;
+}
+
+.breadcrumbs-nav {
+    color: #4cceac;
 }
 
 img {
