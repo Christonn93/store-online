@@ -1,4 +1,5 @@
 # Course assignment JavaScript Frameworks
+![Website image](./src/assets/images/storeOnlineLoadingPAge.png)
 
 This project is based on course assignment during JavaScript framework class at Noroff to apply knowledge of React to build an eCom store.
 
